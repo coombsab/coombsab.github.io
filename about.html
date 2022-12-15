@@ -26,19 +26,26 @@
     justify-content: center;
   }
 
+
+  @media (min-width: 768px) {
+    .about-section>img {
+      width: 50%;
+      height: 50%;
+    }
+    .about-section {
+      flex-wrap: nowrap;
+    }
+  }
   
   @media (min-width: 992px) {
     .indent {
       text-indent: 1.5rem;
     }
 
-    .about-section {
-      flex-wrap: nowrap;
-    }
   
     .about-section>img {
-      width: 50%;
-      height: 50%;
+      width: 75%;
+      height: 75%;
     }
   }
 </style>
