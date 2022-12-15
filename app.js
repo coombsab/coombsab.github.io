@@ -9,10 +9,10 @@ function includeHTML(componentName) {
     if (file) {
       /* Make an HTTP request using the attribute value as the file name: */
       xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
+      xhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+          if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
           /* Remove the attribute, and call this function once more: */
           elmnt.removeAttribute(componentName);
           includeHTML();
@@ -26,4 +26,30 @@ function includeHTML(componentName) {
   }
 }
 
+function goApplications() {
+  const elemApplications = document.getElementById("applications")
+  const elemAbout = document.getElementById("about")
+  const buttonApplications = document.getElementById("buttonApplications")
+  const buttonAbout = document.getElementById("buttonAbout")  
+
+  elemApplications?.classList.remove("invisible")
+  elemAbout?.classList.add("invisible")
+  buttonApplications?.setAttribute("disabled", "true")
+  buttonAbout?.removeAttribute("disabled")
+}
+
+function goAbout() {
+  const elemApplications = document.getElementById("applications")
+  const elemAbout = document.getElementById("about")
+  const buttonApplications = document.getElementById("buttonApplications")
+  const buttonAbout = document.getElementById("buttonAbout")  
+
+  elemAbout?.classList.remove("invisible")
+  elemApplications?.classList.add("invisible")
+  buttonAbout?.setAttribute("disabled", "true")
+  buttonApplications?.removeAttribute("disabled")
+}
+
 includeHTML("carousel")
+includeHTML("navbar")
+includeHTML("about")
