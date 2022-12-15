@@ -1,0 +1,303 @@
+<section class="main-section text-visible">
+  <h1 class="text-center mb-5 pt-md-4 pt-2">Applications</h1>
+  <!-- dev team images and desc -->
+  <div class="my-body">
+    <div class="my-container">
+      <input type="radio" name="slider" id="item-1" checked />
+      <input type="radio" name="slider" id="item-2" />
+      <input type="radio" name="slider" id="item-3" />
+      <!-- <input type="radio" name="slider" id="item-4" />
+      <input type="radio" name="slider" id="item-5" />
+      <input type="radio" name="slider" id="item-6" /> -->
+
+
+      <div class="cards">
+        <!-- Digital Dungeons -->
+        <label class="card" for="item-1" id="index-1">
+          <div class="img-wrapper">
+            <img src="../assets/DigitalDungeons.png" alt="Digital Dungeons" />
+          </div>
+          <div class="desc">
+            <div class="desc-title d-flex justify-content-center">
+              <h3>Digital Dungeons</h3>
+              <div class="icons d-flex gap-2 ps-3">
+                <a href="https://digital-dungeons.onrender.com/" target="_blank" class="mdi mdi-page fs-4"
+                  title="Digital Dungeons"></a>
+              </div>
+            </div>
+            <div class="desc-body p-3">
+              <p>We be the digital dungeons and dragons resource!</p>
+            </div>
+          </div>
+        </label>
+
+
+
+        <!-- Keepr -->
+        <label class="card" for="item-2" id="index-2">
+          <div class="img-wrapper">
+            <img src="../assets/Keepr.png" alt="Abraham Coombs" />
+          </div>
+          <div class="desc">
+            <div class="desc-title d-flex justify-content-center">
+              <h3>Keepr</h3>
+              <div class="icons d-flex gap-2 ps-3">
+                <a href="https://github.com/coombsab" target="_blank" class="mdi mdi-page fs-4" title="Keepr"></a>
+              </div>
+            </div>
+            <div class="desc-body p-3">
+              <p>Keepr is a photo sharing site where albums (keeps) can be created to store images.</p>
+            </div>
+          </div>
+        </label>
+
+
+
+        <!-- Groceries -->
+        <label class="card" for="item-3" id="index-3">
+          <div class="img-wrapper">
+            <img src="../assets/Groceries.png" alt="Groceries" />
+          </div>
+          <div class="desc">
+            <div class="desc-title d-flex justify-content-center">
+              <h3>Groceries</h3>
+              <div class="icons d-flex gap-2 ps-3">
+                <a href="https://groceries.onrender.com/" target="_blank" class="mdi mdi-page fs-4"
+                  title="Groceries"></a>
+              </div>
+            </div>
+            <div class="desc-body p-3">
+              <span>Digital list of groceries... no more paper lists!</span>
+            </div>
+          </div>
+        </label>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .main-section {
+    height: 90vh;
+  }
+
+  .my-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "DM Sans", sans-serif;
+    transition: background 0.4s ease-in;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  .my-container {
+    width: 100%;
+    max-width: 800px;
+    max-height: 600px;
+    height: 100%;
+    transform-style: preserve-3d;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-top: 3rem;
+  }
+
+  .card {
+    position: absolute;
+    width: 60%;
+    height: fit-content;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transition: transform 0.75s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+  }
+
+  #index-1 {
+    background-image: url("https://images.unsplash.com/photo-1571989601904-c1b26bb0f25a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80");
+    background-position: center;
+    background-size: cover;
+  }
+  
+  #index-2 {
+    background-image: url("https://images.unsplash.com/photo-1502982720700-bfff97f2ecac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80");
+    background-position: center;
+    background-size: cover;
+  }
+
+  #index-3 {
+    background-image: url("https://images.unsplash.com/photo-1579113800032-c38bd7635818?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .img-wrapper {
+    background-color: rgb(0, 0, 0, 0.75);
+    height: 100%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    padding: 1rem;
+  }
+
+  img {
+    width: 100%;
+    height: 55vh;
+    border-radius: 10px;
+    object-fit: scale-down;
+    /* object-fit: cover; */
+  }
+
+  .desc {
+    display: none;
+    padding: 0.5rem;
+    /* backdrop-filter: blur(8px); */
+    background-color: rgb(0, 0, 0, 0.75);
+
+  }
+
+  .desc-title {
+    position: relative;
+    border-bottom: 2px solid rgba(95, 19, 95, 0.68);
+  }
+
+  .desc-body {
+    max-height: 25vh;
+    overflow-y: auto;
+  }
+
+  .icons {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  @media (min-width: 768px) {
+    .card {
+      width: 80%;
+    }
+
+    .cards {
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    img {
+      max-height: 60vh;
+    }
+  }
+
+  #item-1:checked~.cards #index-3,
+  #item-2:checked~.cards #index-1,
+  #item-3:checked~.cards #index-2 {
+    transform: translatex(-40%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  #item-1:checked~.cards #index-2,
+  #item-2:checked~.cards #index-3,
+  #item-3:checked~.cards #index-1 {
+    transform: translatex(40%) scale(0.8);
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  #item-1:checked~.cards #index-1,
+  #item-2:checked~.cards #index-2,
+  #item-3:checked~.cards #index-3 {
+    transform: translatex(0) scale(1);
+    width: 80%;
+    opacity: 1;
+    z-index: 1;
+    cursor: default;
+  }
+
+  #item-1:checked~.cards #index-1>.desc,
+  #item-2:checked~.cards #index-2>.desc,
+  #item-3:checked~.cards #index-3>.desc {
+    display: block;
+  }
+
+
+  /* 6 items */
+  /* #item-1:checked~.cards #index-3,
+#item-1:checked~.cards #index-4,
+#item-1:checked~.cards #index-5,
+#item-2:checked~.cards #index-4,
+#item-2:checked~.cards #index-5,
+#item-2:checked~.cards #index-6,
+#item-3:checked~.cards #index-1,
+#item-3:checked~.cards #index-5,
+#item-3:checked~.cards #index-6,
+#item-4:checked~.cards #index-1,
+#item-4:checked~.cards #index-2,
+#item-4:checked~.cards #index-6,
+#item-5:checked~.cards #index-1,
+#item-5:checked~.cards #index-2,
+#item-5:checked~.cards #index-3,
+#item-6:checked~.cards #index-2,
+#item-6:checked~.cards #index-3,
+#item-6:checked~.cards #index-4 {
+  display: none;
+}
+
+#item-1:checked~.cards #index-6,
+#item-2:checked~.cards #index-1,
+#item-3:checked~.cards #index-2,
+#item-4:checked~.cards #index-3,
+#item-5:checked~.cards #index-4,
+#item-6:checked~.cards #index-5 {
+  transform: translatex(-40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked~.cards #index-2,
+#item-2:checked~.cards #index-3,
+#item-3:checked~.cards #index-4,
+#item-4:checked~.cards #index-5,
+#item-5:checked~.cards #index-6,
+#item-6:checked~.cards #index-1 {
+  transform: translatex(40%) scale(0.8);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+#item-1:checked~.cards #index-1,
+#item-2:checked~.cards #index-2,
+#item-3:checked~.cards #index-3,
+#item-4:checked~.cards #index-4,
+#item-5:checked~.cards #index-5,
+#item-6:checked~.cards #index-6 {
+  transform: translatex(0) scale(1);
+  width: 80%;
+  opacity: 1;
+  z-index: 1;
+  cursor: default;
+}
+
+#item-1:checked~.cards #index-1>.desc,
+#item-2:checked~.cards #index-2>.desc,
+#item-3:checked~.cards #index-3>.desc,
+#item-4:checked~.cards #index-4>.desc,
+#item-5:checked~.cards #index-5>.desc,
+#item-6:checked~.cards #index-6>.desc {
+  display: block;
+} */
+</style>
