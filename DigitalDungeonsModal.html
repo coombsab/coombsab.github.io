@@ -1,0 +1,62 @@
+<div class="modal-bg" id="digitalDungeonsModal">
+  <div class="modal-content-wrapper" id="digitalDungeonsModalWrapper">
+    <div class="modal-content" id="digitalDungeonsModalContent">
+      <div class="container-fluid p-0">
+        <div class="row">
+          <div class="col-12">
+            <h1>Soon to have info about Digital Dungeons!</h1>
+            <!-- <button onclick="closeModal('digitalDungeonsModal')">Close Me</button> -->
+            <!-- <button id="closeButton">Close Me</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <p class="text-visible">HELLO WORLD</p> -->
+
+<style scoped>
+  .modal-bg {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 2000;
+  }
+
+  .modal-content-wrapper {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2001;
+  }
+
+  .modal-content {
+    height: 100vh;
+    width: 100vw;
+    background-color: #E5E5E5;
+    border-radius: 6.94872px;
+    z-index: 2002;
+  }
+
+  .container-fluid {
+    height: 100%;
+  }
+
+  .row {
+    height: 100%;
+  }
+
+  @media screen and (min-width: 768px) {
+    .modal-content {
+      height: 70vh;
+      width: 70vw;
+    }
+  }
+</style>

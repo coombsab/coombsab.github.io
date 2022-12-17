@@ -1,5 +1,5 @@
 <section class="main-section text-visible">
-  <p class="text-center mb-5 pt-md-4 pt-2 fs-1">Applications</p>
+  <!-- <p class="text-center mb-5 pt-md-4 pt-2 fs-1">Applications</p> -->
   <!-- dev team images and desc -->
   <div class="my-body">
     <div class="my-container">
@@ -15,7 +15,7 @@
           </div>
           <div class="desc">
             <div class="desc-title d-flex justify-content-center">
-              <h3>Digital Dungeons</h3>
+              <h3><button class="text-visible" onclick="openModal('digitalDungeonsModal')">Digital Dungeons</button></h3>
               <div class="icons d-flex gap-2 ps-3">
                 <a href="https://digital-dungeons.onrender.com/" target="_blank" class="mdi mdi-page fs-4"
                   title="Digital Dungeons"></a>
@@ -27,8 +27,6 @@
             </div>
           </div>
         </label>
-
-
 
         <!-- Keepr -->
         <label class="card" for="item-2" id="index-2">
@@ -48,8 +46,6 @@
             </div>
           </div>
         </label>
-
-
 
         <!-- Groceries -->
         <label class="card" for="item-3" id="index-3">
@@ -83,6 +79,11 @@
     justify-content: center;
     font-family: "DM Sans", sans-serif;
     transition: background 0.4s ease-in;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
   }
 
   input[type="radio"] {

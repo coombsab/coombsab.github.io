@@ -30,7 +30,7 @@ function goApplications() {
   const elemApplications = document.getElementById("applications")
   const elemAbout = document.getElementById("about")
   const buttonApplications = document.getElementById("buttonApplications")
-  const buttonAbout = document.getElementById("buttonAbout")  
+  const buttonAbout = document.getElementById("buttonAbout")
 
   elemApplications?.classList.remove("invisible")
   elemAbout?.classList.add("invisible")
@@ -42,7 +42,7 @@ function goAbout() {
   const elemApplications = document.getElementById("applications")
   const elemAbout = document.getElementById("about")
   const buttonApplications = document.getElementById("buttonApplications")
-  const buttonAbout = document.getElementById("buttonAbout")  
+  const buttonAbout = document.getElementById("buttonAbout")
 
   elemAbout?.classList.remove("invisible")
   elemApplications?.classList.add("invisible")
@@ -50,6 +50,49 @@ function goAbout() {
   buttonApplications?.removeAttribute("disabled")
 }
 
+function setupModal(modalId) {
+  console.log("setupModal", modalId)
+  let modalBg = document.getElementById(modalId);
+  let modal = document.getElementById(modalId + "Content");
+
+  if (!modalBg || !modal) {
+    return
+  }
+  modalBg.addEventListener("click", () => closeModal(modalId));
+  // modalBg.addEventListener("click", closeModal);
+  // modal.addEventListener("click", modalClick);
+}
+
+function modalClick(event) {
+  // event.preventDefault();
+  event.stopImmediatePropagation();
+  return false;
+}
+
+function closeModal(modalId) {
+  let modal = document.getElementById(modalId);
+  let body = document.querySelector("body");
+  if (!body || !modal) {
+    return
+  }
+  modal.style.display = "none";
+  body.style.overflow = "auto";
+}
+
+function openModal(modalId) {
+  let modal = document.getElementById(modalId);
+  let body = document.querySelector("body");
+  if (!body || !modal) {
+    return
+  }
+  body.style.overflow = "hidden";
+  modal.style.display = "block";
+}
+
 includeHTML("carousel")
 includeHTML("navbar")
 includeHTML("about")
+includeHTML("digitalDungeonsModal")
+setTimeout(() => {
+  setupModal("digitalDungeonsModal")
+}, 500)

@@ -13,6 +13,7 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
+  /* position: relative; */
   /* overflow-x: hidden; */
 }
 
@@ -34,6 +35,7 @@ main {
   flex-grow: 1;
   overflow-y: auto;
   height: 95vh;
+  position: relative;
 }
 
 .content-wrapper {
@@ -82,3 +84,10 @@ footer {
 .invisible {
   opacity: 0;
 }
+
+.my-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
