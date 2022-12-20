@@ -51,7 +51,7 @@ function goAbout() {
 }
 
 function setupModal(modalId) {
-  console.log("setupModal", modalId)
+  // console.log("setupModal", modalId)
   let modalBg = document.getElementById(modalId);
   let modal = document.getElementById(modalId + "Content");
 
@@ -99,4 +99,4 @@ setTimeout(() => {
   setupModal("digitalDungeonsModal")
   setupModal("keeprModal")
   setupModal("groceriesModal")
-}, 500)
+}, 1000)
