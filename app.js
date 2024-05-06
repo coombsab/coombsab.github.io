@@ -27,31 +27,54 @@ function includeHTML(componentName) {
 }
 
 function goApplications() {
-  const elemApplications = document.getElementById("applications")
-  const elemAbout = document.getElementById("about")
-  const buttonApplications = document.getElementById("buttonApplications")
-  const buttonAbout = document.getElementById("buttonAbout")
-
-  elemApplications?.classList.remove("invisible")
-  elemAbout?.classList.add("invisible")
-  buttonApplications?.setAttribute("disabled", "true")
-  buttonAbout?.removeAttribute("disabled")
+  const elemApplications = document.getElementById("applications");
+  const elemAbout = document.getElementById("about");
+  const buttonApplications = document.getElementById("buttonApplications");
+  const buttonAbout = document.getElementById("buttonAbout");
+  
+  if (elemApplications) {
+    elemApplications.style.display = "block";
+    setTimeout(() => {
+      elemApplications.classList.remove("invisible");
+    }, 2000);
+  }
+  
+  if (elemAbout) {
+    elemAbout.classList.add("invisible");
+    setTimeout(() => {
+      elemAbout.style.display = "none";
+    }, 2000);
+  }
+  
+    buttonApplications?.setAttribute("disabled", "true");
+    buttonAbout?.removeAttribute("disabled");
 }
 
 function goAbout() {
-  const elemApplications = document.getElementById("applications")
-  const elemAbout = document.getElementById("about")
-  const buttonApplications = document.getElementById("buttonApplications")
-  const buttonAbout = document.getElementById("buttonAbout")
+  const elemApplications = document.getElementById("applications");
+  const elemAbout = document.getElementById("about");
+  const buttonApplications = document.getElementById("buttonApplications");
+  const buttonAbout = document.getElementById("buttonAbout");
 
-  elemAbout?.classList.remove("invisible")
-  elemApplications?.classList.add("invisible")
-  buttonAbout?.setAttribute("disabled", "true")
-  buttonApplications?.removeAttribute("disabled")
+  if (elemApplications) {
+    elemApplications.classList.add("invisible");
+    setTimeout(() => {
+      elemApplications.style.display = "none";
+    }, 2000);
+  }
+
+  if (elemAbout) {
+    elemAbout.style.display = "block";
+    setTimeout(() => {
+      elemAbout.classList.remove("invisible");
+    }, 2000);
+  }
+  buttonAbout?.setAttribute("disabled", "true");
+  buttonApplications?.removeAttribute("disabled");
 }
 
 function setupModal(modalId) {
-  // console.log("setupModal", modalId)
+  // console.log("setupModal", modalId);
   let modalBg = document.getElementById(modalId);
   let modal = document.getElementById(modalId + "Content");
 
