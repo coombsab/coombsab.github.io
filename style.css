@@ -8,7 +8,7 @@ body {
   width: 100vw;
   height: 100vh;
   background-color: black;
-  background-image: url("https://i.giphy.com/media/OK5LK5zLFfdm/giphy.webp");
+  background-image: url("../assets/LandingBG.webp");
   background-position: center;
   background-size: cover;
   display: flex;
