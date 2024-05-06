@@ -36,14 +36,14 @@ function goApplications() {
     elemApplications.style.display = "block";
     setTimeout(() => {
       elemApplications.classList.remove("invisible");
-    }, 2000);
+    }, 500);
   }
   
   if (elemAbout) {
     elemAbout.classList.add("invisible");
     setTimeout(() => {
       elemAbout.style.display = "none";
-    }, 2000);
+    }, 500);
   }
   
     buttonApplications?.setAttribute("disabled", "true");
@@ -60,14 +60,14 @@ function goAbout() {
     elemApplications.classList.add("invisible");
     setTimeout(() => {
       elemApplications.style.display = "none";
-    }, 2000);
+    }, 500);
   }
 
   if (elemAbout) {
     elemAbout.style.display = "block";
     setTimeout(() => {
       elemAbout.classList.remove("invisible");
-    }, 2000);
+    }, 500);
   }
   buttonAbout?.setAttribute("disabled", "true");
   buttonApplications?.removeAttribute("disabled");
